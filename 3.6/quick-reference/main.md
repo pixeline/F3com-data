@@ -161,6 +161,12 @@ Information about the last HTTP error that occurred:
 * `ERROR.trace` is used for HTTP 500 errors, to retrieve the stack trace. `array()`
 * `ERROR.level` - error reporting level (`E_WARNING`, `E_STRICT`, etc.)
 
+You can overwrite the ERROR.text when triggering an error by passing the new text as a second argument : 
+
+```php
+// Trigger a 401 error.
+$f3->error(401, "The information necessary to grant access is missing from the request.");
+```
 
 ### ESCAPE
 **Type:** `bool` &nbsp; &nbsp; **Default:** `TRUE`
